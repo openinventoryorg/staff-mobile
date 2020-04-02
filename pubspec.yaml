@@ -19,6 +19,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # socket connection
+  adhara_socket_io: ^0.4.1
     
   # state management
   provider: ^4.0.4

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:openinventory_staff_app/controllers/socket.dart';
 import 'package:openinventory_staff_app/views/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +24,8 @@ void main() {
 /// [BaseUrlController]
 ///     - [TokenController]
 ///         - [ApiController]
-///               - [OpenInventoryApp]
+///               - [SocketController]
+///                   - [OpenInventoryApp]
 ///
 /// [OpenInventoryApp] is provided as a proxy provider of
 /// other two providers. (which are changed notifier providers)
@@ -44,7 +46,16 @@ class App extends StatelessWidget {
             tokenController: t,
           ),
           lazy: false,
-          child: OpenInventoryApp(),
+          child: ProxyProvider2<TokenController, BaseUrlController,
+              SocketController>(
+            create: (context) => SocketController.fromContext(context: context),
+            update: (_, t, b, s) => SocketController(
+              baseUrl: b.baseUrl,
+              token: t.token,
+            ),
+            child: OpenInventoryApp(),
+            lazy: false,
+          ),
         ),
       ),
     );

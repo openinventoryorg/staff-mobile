@@ -124,4 +124,7 @@ class TokenController extends ChangeNotifier {
 
   /// Logged in status of the user
   bool get isLoggedIn => _token != null;
+
+  /// Token required for socket connection
+  String get token => _token?.token;
 }
