@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:openinventory_student_app/views/colors.dart';
+import 'package:openinventory_staff_app/views/colors.dart';
 import 'package:provider/provider.dart';
 
 import './controllers/base_url.dart';

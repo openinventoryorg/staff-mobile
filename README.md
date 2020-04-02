@@ -1,29 +1,16 @@
-# Open Inventory Student Mobile App
+# openinventory_staff_app
 
-This is the mobile app which controls access of the user to the system.
+A new Flutter project.
 
-## Installation
+## Getting Started
 
-First, install [flutter](https://flutter.dev).
-Then clone this repository and run using flutter tool.
+This project is a starting point for a Flutter application.
 
-```bash
-git clone https://github.com/openinventorysystem/student-mobile
-cd student-mobile
-flutter run
-```
+A few resources to get you started if this is your first Flutter project:
 
-## Usage
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-This has to used alongside the open inventory backend.
-Host the backend project using any method and then your lab users will be able to log in to the server using this app by providing base url.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

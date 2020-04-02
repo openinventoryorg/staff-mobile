@@ -4,8 +4,8 @@ library view_section_settings;
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
-import 'package:openinventory_student_app/controllers/api.dart';
-import 'package:openinventory_student_app/routes/router.dart';
+import 'package:openinventory_staff_app/controllers/api.dart';
+import 'package:openinventory_staff_app/routes/router.dart';
 
 class SettingsSection extends StatelessWidget {
   @override

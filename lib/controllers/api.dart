@@ -4,7 +4,7 @@ library controller_api;
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-import 'package:openinventory_student_app/api/responses/user.dart';
+import 'package:openinventory_staff_app/api/responses/user.dart';
 import './base_url.dart';
 import '../api/api_client.dart';
 import './token.dart';

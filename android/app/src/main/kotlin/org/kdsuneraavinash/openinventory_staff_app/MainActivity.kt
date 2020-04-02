@@ -1,4 +1,4 @@
-package org.kdsuneraavinash.openinventory_student_app
+package org.kdsuneraavinash.openinventory_staff_app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

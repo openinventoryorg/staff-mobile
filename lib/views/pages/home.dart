@@ -6,9 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
-import 'package:openinventory_student_app/views/sections/browse.dart';
-import 'package:openinventory_student_app/views/sections/search.dart';
-import 'package:openinventory_student_app/views/sections/settings.dart';
+import 'package:openinventory_staff_app/views/sections/browse.dart';
+import 'package:openinventory_staff_app/views/sections/search.dart';
+import 'package:openinventory_staff_app/views/sections/settings.dart';
 
 class HomePage extends StatefulWidget {
   @override

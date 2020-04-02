@@ -5,8 +5,8 @@ library view_page_splash;
 import 'package:flutter/material.dart';
 
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:openinventory_student_app/controllers/token.dart';
-import 'package:openinventory_student_app/routes/router.dart';
+import 'package:openinventory_staff_app/controllers/token.dart';
+import 'package:openinventory_staff_app/routes/router.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

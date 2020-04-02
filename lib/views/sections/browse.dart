@@ -4,8 +4,8 @@ library view_section_browse;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:openinventory_student_app/routes/router.dart';
-import 'package:openinventory_student_app/views/colors.dart';
+import 'package:openinventory_staff_app/routes/router.dart';
+import 'package:openinventory_staff_app/views/colors.dart';
 
 class BrowseSection extends StatelessWidget {
   @override

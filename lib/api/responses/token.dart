@@ -2,7 +2,7 @@
 library response_token;
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:openinventory_student_app/api/responses/user.dart';
+import 'package:openinventory_staff_app/api/responses/user.dart';
 
 part 'token.g.dart';
 

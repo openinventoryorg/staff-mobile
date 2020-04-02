@@ -3,7 +3,7 @@ library view_section_search;
 
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:openinventory_student_app/views/colors.dart';
+import 'package:openinventory_staff_app/views/colors.dart';
 
 class SearchSection extends StatelessWidget {
   @override
