@@ -6,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
-import 'package:openinventory_staff_app/views/sections/browse.dart';
 import 'package:openinventory_staff_app/views/sections/search.dart';
 import 'package:openinventory_staff_app/views/sections/settings.dart';
 
@@ -37,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         controller: _pageController,
         physics: NeverScrollableScrollPhysics(),
         children: <Widget>[
-          BrowseSection(),
+          Container(),
           SearchSection(),
           Container(),
           SettingsSection(),
