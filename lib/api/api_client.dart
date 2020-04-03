@@ -42,7 +42,7 @@ class ApiClient {
   /// # POST /login
   Future<TokenResponse> login(String email, String password) async {
     try {
-      String endPoint = '$_baseUrl/login';
+      String endPoint = '$_baseUrl/api/login';
       var request = LoginRequest(email: email, password: password);
       var response = await _dio.post(endPoint, data: request.toJson());
       return TokenResponse.fromJson(response.data);
@@ -58,7 +58,7 @@ class ApiClient {
   /// # GET /demo
   Future<void> demo() async {
     try {
-      String endPoint = '$_baseUrl/demo';
+      String endPoint = '$_baseUrl/api/demo';
       var response = await _dio.get(endPoint);
       print(response);
     } catch (err) {

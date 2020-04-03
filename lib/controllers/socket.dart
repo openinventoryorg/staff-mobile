@@ -10,7 +10,6 @@ import './base_url.dart';
 import './token.dart';
 
 class SocketController extends ChangeNotifier {
-  static final apiSubstringRegex = RegExp('\/api\$');
   final SocketIOManager _manager = SocketIOManager();
   final String _token;
   final String _baseUrl;
@@ -21,7 +20,7 @@ class SocketController extends ChangeNotifier {
     @required String token,
     @required String baseUrl,
   })  : _token = token,
-        _baseUrl = baseUrl.replaceAll(apiSubstringRegex, '') {
+        _baseUrl = baseUrl {
     if (_baseUrl != null && _token != null) {
       _connectToSocket();
     }
@@ -34,8 +33,8 @@ class SocketController extends ChangeNotifier {
     );
   }
 
-  static SocketController of(BuildContext context) {
-    return Provider.of<SocketController>(context, listen: false);
+  static SocketController of(BuildContext context, [bool listen = false]) {
+    return Provider.of<SocketController>(context, listen: listen);
   }
 
   @override
@@ -80,7 +79,8 @@ class SocketController extends ChangeNotifier {
     if (_socket != null) {
       bool isConnected = await _socket.isConnected();
       if (isConnected) {
-        await _socket.emit('client#message', message);
+        await _socket.emit('client#message', [message]);
+        print(message);
       }
     }
   }

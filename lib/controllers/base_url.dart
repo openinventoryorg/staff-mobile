@@ -47,13 +47,7 @@ class BaseUrlController extends ChangeNotifier {
   /// This also saves the url in the storage.
   /// All the listners will be notified when this is completed.
   Future<void> setBaseUrl(String url) async {
-    url ??= 'localhost';
-    if (!url.startsWith('http')) {
-      url = 'http://$url';
-    }
-    if (!url.endsWith('/api')) {
-      url = '$url/api';
-    }
+    url ??= 'http://localhost';
     _baseUrl = url;
     SharedPreferences _storage = await SharedPreferences.getInstance();
     _storage.setString(storeKey, _baseUrl);

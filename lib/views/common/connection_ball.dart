@@ -1,3 +1,5 @@
+library view_common_connection_ball;
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:openinventory_staff_app/controllers/socket.dart';

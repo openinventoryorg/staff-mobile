@@ -1,10 +1,10 @@
 /// Login page which handles user login
 library view_page_login;
 
+import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:line_icons/line_icons.dart';
-import 'package:openinventory_staff_app/api/flushbar/flushbar.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 import 'package:openinventory_staff_app/controllers/api.dart';
 import 'package:openinventory_staff_app/controllers/base_url.dart';
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
             hint: 'https://myorganization.com',
             label: 'Organization Url',
             controller: _baseUrlController,
-            prefix: LineIcons.server,
+            prefix: AntDesign.cloudo,
             keyboard: TextInputType.emailAddress,
             helperText: 'This should be is the format http://yourwebsite.com',
           ),
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
             hint: '150092U@uom.lk',
             label: 'Email',
             controller: _emailController,
-            prefix: LineIcons.at,
+            prefix: AntDesign.mail,
             keyboard: TextInputType.url,
           ),
           formTextBox(
@@ -91,11 +91,9 @@ class _LoginPageState extends State<LoginPage> {
             controller: _passwordController,
             obscureText: _hidePassword,
             keyboard: TextInputType.text,
-            prefix: LineIcons.lock,
+            prefix: AntDesign.lock,
             suffix: IconButton(
-              icon: _hidePassword
-                  ? Icon(LineIcons.eye_slash)
-                  : Icon(LineIcons.eye),
+              icon: _hidePassword ? Icon(AntDesign.eyeo) : Icon(AntDesign.eye),
               onPressed: switchPasswordVisibility,
             ),
           ),
@@ -159,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
         height: 24,
       );
     } else {
-      return Icon(LineIcons.arrow_right);
+      return Icon(AntDesign.arrowright);
     }
   }
 

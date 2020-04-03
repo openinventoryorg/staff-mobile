@@ -22,6 +22,9 @@ dependencies:
 
   # socket connection
   adhara_socket_io: ^0.4.1
+
+  # barcodes
+  barcode_scan: ^2.0.1
     
   # state management
   provider: ^4.0.4
@@ -31,13 +34,13 @@ dependencies:
   shared_preferences: ^0.5.6+3
 
   # icon/font packs
-  line_icons: ^0.2.0
+  flutter_icons: ^1.0.0+1
   google_fonts: ^0.3.9
 
   # helper widgets
   auto_size_text: ^2.1.0
   flutter_spinkit: ^4.1.2
-  fancy_bottom_navigation: ^0.3.2
+  flushbar: 1.8.2
 
   # utility widgets
   logger: ^0.8.3 
