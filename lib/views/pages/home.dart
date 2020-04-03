@@ -5,6 +5,8 @@ import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:openinventory_staff_app/views/common/connection_ball.dart';
+import 'package:openinventory_staff_app/views/sections/home.dart';
 
 import 'package:openinventory_staff_app/views/sections/search.dart';
 import 'package:openinventory_staff_app/views/sections/settings.dart';
@@ -30,13 +32,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Open Inventory'),
-        centerTitle: true,
+        actions: <Widget>[ConnectionBall()],
       ),
       body: PageView(
         controller: _pageController,
         physics: NeverScrollableScrollPhysics(),
         children: <Widget>[
-          Container(),
+          HomeSection(),
           SearchSection(),
           Container(),
           SettingsSection(),

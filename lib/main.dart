@@ -46,8 +46,8 @@ class App extends StatelessWidget {
             tokenController: t,
           ),
           lazy: false,
-          child: ProxyProvider2<TokenController, BaseUrlController,
-              SocketController>(
+          child: ChangeNotifierProxyProvider2<TokenController,
+              BaseUrlController, SocketController>(
             create: (context) => SocketController.fromContext(context: context),
             update: (_, t, b, s) => SocketController(
               baseUrl: b.baseUrl,

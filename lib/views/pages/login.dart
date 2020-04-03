@@ -1,10 +1,10 @@
 /// Login page which handles user login
 library view_page_login;
 
-import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:openinventory_staff_app/api/flushbar/flushbar.dart';
 
 import 'package:openinventory_staff_app/controllers/api.dart';
 import 'package:openinventory_staff_app/controllers/base_url.dart';
@@ -76,6 +76,7 @@ class _LoginPageState extends State<LoginPage> {
             controller: _baseUrlController,
             prefix: LineIcons.server,
             keyboard: TextInputType.emailAddress,
+            helperText: 'This should be is the format http://yourwebsite.com',
           ),
           formTextBox(
             hint: '150092U@uom.lk',
@@ -125,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
       @required TextEditingController controller,
       @required TextInputType keyboard,
       @required IconData prefix,
+      String helperText,
       bool obscureText = false,
       Widget suffix}) {
     return Padding(
@@ -139,6 +141,7 @@ class _LoginPageState extends State<LoginPage> {
           border: OutlineInputBorder(),
           suffixIcon: suffix,
           prefixIcon: Icon(prefix),
+          helperText: helperText,
         ),
       ),
     );
