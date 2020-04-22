@@ -65,7 +65,9 @@
         <li class="inherited"><a href="../../view_page_home/HomePage/runtimeType.html">runtimeType</a></li>
     
         <li class="section-title"><a href="../../view_page_home/HomePage-class.html#instance-methods">Methods</a></li>
-        <li><a href="../../view_page_home/HomePage/createState.html">createState</a></li>
+        <li><a href="../../view_page_home/HomePage/build.html">build</a></li>
+        <li><a href="../../view_page_home/HomePage/disconnectedWidget.html">disconnectedWidget</a></li>
+        <li><a href="../../view_page_home/HomePage/sendBarcodeToWebApp.html">sendBarcodeToWebApp</a></li>
         <li class="inherited"><a href="../../view_page_home/HomePage/createElement.html">createElement</a></li>
         <li class="inherited"><a href="../../view_page_home/HomePage/debugDescribeChildren.html">debugDescribeChildren</a></li>
         <li class="inherited"><a href="../../view_page_home/HomePage/debugFillProperties.html">debugFillProperties</a></li>
@@ -96,13 +98,13 @@
         </section>
         <section class="desc markdown">
           <p>Controls how one widget replaces another widget in the tree.</p>
-<p>If the <a href="../../view_section_settings/SettingsSection/runtimeType.html">runtimeType</a> and <a href="../../view_section_settings/SettingsSection/key.html">key</a> properties of the two widgets are
-<a href="../../view_section_settings/SettingsSection/operator_equals.html">operator==</a>, respectively, then the new widget replaces the old widget by
+<p>If the <a href="../../view_page_splash/SplashScreen/runtimeType.html">runtimeType</a> and <a href="../../view_page_splash/SplashScreen/key.html">key</a> properties of the two widgets are
+<a href="../../view_page_splash/SplashScreen/operator_equals.html">operator==</a>, respectively, then the new widget replaces the old widget by
 updating the underlying element (i.e., by calling <code>Element.update</code> with the
 new widget). Otherwise, the old element is removed from the tree, the new
 widget is inflated into an element, and the new element is inserted into the
 tree.</p>
-<p>In addition, using a <code>GlobalKey</code> as the widget's <a href="../../view_section_settings/SettingsSection/key.html">key</a> allows the element
+<p>In addition, using a <code>GlobalKey</code> as the widget's <a href="../../view_page_splash/SplashScreen/key.html">key</a> allows the element
 to be moved around the tree (changing parent) without losing state. When a
 new widget is found (its key and type do not match a previous widget in
 the same location), but there was a widget with that same global key

@@ -98,7 +98,7 @@
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; demo() async {
   try {
-    String endPoint = &#39;$_baseUrl&#47;demo&#39;;
+    String endPoint = &#39;$_baseUrl&#47;api&#47;demo&#39;;
     var response = await _dio.get(endPoint);
     print(response);
   } catch (err) {

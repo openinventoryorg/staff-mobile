@@ -153,7 +153,16 @@ Widget build(BuildContext context) {
           tokenController: t,
         ),
         lazy: false,
-        child: OpenInventoryApp(),
+        child: ChangeNotifierProxyProvider2&lt;TokenController,
+            BaseUrlController, SocketController&gt;(
+          create: (context) =&gt; SocketController.fromContext(context: context),
+          update: (_, t, b, s) =&gt; SocketController(
+            baseUrl: b.baseUrl,
+            token: t.token,
+          ),
+          child: OpenInventoryApp(),
+          lazy: false,
+        ),
       ),
     ),
   );

@@ -26,6 +26,7 @@ class SocketController extends ChangeNotifier {
     }
   }
 
+  /// Helper method create [SocketController] using the [BuildContext]
   factory SocketController.fromContext({@required BuildContext context}) {
     return SocketController(
       token: TokenController.of(context).token,
@@ -45,6 +46,9 @@ class SocketController extends ChangeNotifier {
     super.dispose();
   }
 
+  /// Message recieved from the server.
+  ///
+  /// This function will parse the required information from the server reponse.
   void onMessage(dynamic message) {
     try {
       String messageType = message['type'];
@@ -59,22 +63,26 @@ class SocketController extends ChangeNotifier {
     }
   }
 
+  /// Some error occured while communication
   void _onError(dynamic error) {
     _setConnected = false;
     print(error);
   }
 
+  /// WebSocket connection failed
   void _onConnectError(dynamic error) {
     _setConnected = false;
     print('WebSocket connection failed');
     print(error);
   }
 
+  /// Connected to Web Socket
   void _onConnect(dynamic data) {
     _setConnected = true;
     print('Connected to Web Socket');
   }
 
+  /// Sending a message to the web server via the socket interface
   Future<void> sendMessage(message) async {
     if (_socket != null) {
       bool isConnected = await _socket.isConnected();
@@ -85,6 +93,8 @@ class SocketController extends ChangeNotifier {
     }
   }
 
+  /// Main connection function which connects to the server and
+  /// initiate all the callbacks
   Future<void> _connectToSocket() async {
     var _options = SocketOptions(
       _baseUrl,

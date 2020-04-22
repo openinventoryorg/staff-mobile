@@ -80,7 +80,7 @@
         <li><a href="../../controller_api/ApiController/of.html">of</a></li>
     
         <li class="section-title"><a href="../../controller_api/ApiController-class.html#constants">Constants</a></li>
-        <li><a href="../../controller_api/ApiController/permittedRole-constant.html">permittedRole</a></li>
+        <li><a href="../../controller_api/ApiController/restrictedRole-constant.html">restrictedRole</a></li>
     
     
     </ol>
@@ -109,9 +109,8 @@ This also enforces the <strong>permitted roles only</strong> requirement for the
   var token = await _client.login(email, password);
   if (token == null) {
     throw Exception(&#39;Invalid data recieved. Please check your connection.&#39;);
-  } else if (token?.user?.role != permittedRole) {
-    throw Exception(
-        &#39;Only students can use this app. You do not have student credentials.&#39;);
+  } else if (token?.user?.role == restrictedRole) {
+    throw Exception(&#39;You do not have enough credentials to use this app.&#39;);
   }
 
   _tokenController.setToken(token);

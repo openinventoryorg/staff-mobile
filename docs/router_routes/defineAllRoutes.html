@@ -83,9 +83,7 @@
   router.defineRoute(path: &quot;&#47;&quot;, handler: (_, __) =&gt; SplashScreen());
   router.defineRoute(path: &quot;&#47;home&quot;, handler: (_, __) =&gt; HomePage());
   router.defineRoute(path: &quot;&#47;login&quot;, handler: (_, __) =&gt; LoginPage());
-  router.defineRoute(
-      path: &quot;&#47;home&#47;lab&#47;:id&quot;,
-      handler: (_, params) =&gt; LabPage(id: params[&#39;id&#39;][0]));
+  router.defineRoute(path: &quot;&#47;profile&quot;, handler: (_, __) =&gt; ProfilePage());
 }</code></pre>
     </section>
 

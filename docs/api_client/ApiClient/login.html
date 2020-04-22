@@ -100,7 +100,7 @@
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">Future&lt;TokenResponse&gt; login(String email, String password) async {
   try {
-    String endPoint = &#39;$_baseUrl&#47;login&#39;;
+    String endPoint = &#39;$_baseUrl&#47;api&#47;login&#39;;
     var request = LoginRequest(email: email, password: password);
     var response = await _dio.post(endPoint, data: request.toJson());
     return TokenResponse.fromJson(response.data);
